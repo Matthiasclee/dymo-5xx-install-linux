@@ -1,8 +1,10 @@
 # Dymo 5XX driver installer for linux
 # Original drivers: https://github.com/dymosoftware/Drivers
 #                   https://help.dymo.com/s/article/Can-I-install-my-LabelWriter-on-other-systems-than-Windows-and-MacOS?language=en_US
-#
-# Run bash ./install.sh without sudo.
+
+# d9dda5dc9fb36c3c72566bcf3e174ce800d0ec99659aa81e9543d9506bb173f5  5xx-drivers.zip.b64 SHA256
+
+# Run bash ./install.sh in the same directory as the install file without sudo.
 
 # Packages
 
