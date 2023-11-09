@@ -1,9 +1,21 @@
+# Dymo 5XX driver installer for linux
+# Original drivers: https://github.com/dymosoftware/Drivers
+#                   https://help.dymo.com/s/article/Can-I-install-my-LabelWriter-on-other-systems-than-Windows-and-MacOS?language=en_US
+#
+# Run bash ./install.sh without sudo.
+
 # Packages
 
 sudo apt update
 sudo apt install libboost-all-dev libcups2 libcups2-dev libcupsimage2-dev automake-1.16
 
 # Unzip
+ls 5xx-drivers.zip.b64
+if [ "$?" == "2" ]; then
+  echo -e "\e[31m5xx-drivers.zip.b64 not found\e[0m"
+  exit 2
+fi
+
 cat 5xx-drivers.zip.b64 | base64 -d > 5xx-drivers.zip
 unzip 5xx-drivers.zip
 
